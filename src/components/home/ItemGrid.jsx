@@ -24,18 +24,18 @@ export const ItemGrid = ({items}) => {
 
   return (
     
-    <Container style={{ width: "320px", display:"grid", alignItems:"center", backgroundColor:"white", justifyContent:"center", marginTop:"5%"}} >
+    <Container style={{ width: "320px", display:"grid", alignItems:"center", backgroundColor:"white", justifyContent:"center", margin:"5px 5px 5px 5px"}} >
     {
         chunks(2).map(contx=>(
-            <Row key={contx}>
+            <Row key={contx} s>
            {contx.map(inst=>(
             <Button key={inst} style={{ width: "150px",  backgroundColor:"white" }} variant="light"
             onClick={() => viewItem(inst._id)}>
              <Card >
-             <Card.Img variant="top" src={inst.img} style={{ height: "100px", width:""}} />
+             <Card.Img variant="top" src={inst.img} style={{ height: "120px"}} />
              <Card.Body>
            </Card.Body>
-             <div style={{whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis", fontSize:"10px", height:"75px"}}>
+             <div style={{whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis", fontSize:"10px", height:"30px"}}>
              {inst.title}
              </div>
            </Card>
