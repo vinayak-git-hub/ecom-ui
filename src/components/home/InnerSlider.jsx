@@ -19,15 +19,15 @@ export const InterSlider = ({slideItems}) => {
                 gap={6}
               >
                 {item.map(trimItem=>(
-                    <Button key={trimItem} variant="light" style={{borderRadius:"5%", width: "200px", height:"350px", margin:"5px 5px 5px 5px", backgroundColor:"#f2f2f2" }}>
+                    <Button key={trimItem} variant="light" style={{borderRadius:"5%", width: "200px", height:"250px", margin:"5px 5px 5px 5px", backgroundColor:"#f2f2f2" }}>
                       <Card  >
-                    <Card.Img variant="top" src={trimItem.img} style={{ height: "150px"}} />
+                    <Card.Img variant="top" src={trimItem.img} style={{ height: "100px"}} />
                     <Card.Body>
                   </Card.Body>
-                  <div style={{margin:"3px 3px 3px 3px", overflow:"hidden", textOverflow:"ellipsis", fontSize:"15px", color:"black", height:"80px" }}>
+                  <div style={{overflow:"hidden", textOverflow:"ellipsis", fontSize:"14px", color:"black", height:"60px" }}>
                  {trimItem.title}
              </div>
-             <div style={{fontSize:"35px", color:"black", height:"50px" }}>
+             <div style={{fontSize:"20px", color:"black", height:"30px" }}>
                  {"$"+trimItem.price}
              </div>
                   </Card>

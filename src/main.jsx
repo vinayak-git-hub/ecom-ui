@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Login } from './components/login/Login.jsx'
 import ProctectLogin from './auth/ProctectLogin.jsx'
 import { SignUp } from './components/login/SignUp.jsx'
-import { Product } from './components/Product.jsx'
+import { Product } from './components/product/Product.jsx'
+import App from './App.jsx'
+import Header from './components/Header.jsx'
 
 var user = true
 
@@ -14,8 +15,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    <Router>
       <Routes>
       <Route element={<ProctectLogin user={user}/>}>
-      <Route path='/' element={<App/>}/>
-      <Route path='/:id' element={<Product/>}/>
+      <Route path='/' element={<App /> }/>
+      <Route path='/:id' element={<Product />}/>
       </Route>
 
       <Route element={<ProctectLogin user={!user} redirect='/'/>}>

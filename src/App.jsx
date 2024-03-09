@@ -1,14 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
-import Home from './components/home/Home'
 import About from './components/About';
+import Header from './components/Header';
+import Home from './components/home/Home';
 
 function App() {
-  console.log('test')
   return (
     <>
-    <Header />
-    <Home />
+     <Header/>
+     <Home/>
     <About />
     </>
   )
