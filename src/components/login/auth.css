@@ -1,0 +1,16 @@
+.img{
+    margin-bottom: 42%;
+    margin-right: 80%;
+    position: fixed;
+    transition-duration: 300ms;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-out;
+    width: 175px;
+    transition: box-shadow 0.1s, transform 0.1s;
+  
+}
+
+.img:hover {
+    box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+    cursor: pointer;
+  } 
