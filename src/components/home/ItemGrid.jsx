@@ -5,28 +5,41 @@ import Col from "react-bootstrap/Col";
 import img from "../../assets/download.jpeg";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
 
 export const ItemGrid = ({items}) => {
+
+  const navigate = useNavigate() 
 
   const chunks = (size) => Array.from(
     new Array(Math.ceil(items.length / size)),
     (_, i) => items.slice(i * size, i * size + size)
 );
+
+ const viewItem = (rawId) =>{
+ const id = "/"+rawId; 
+ console.log(id)
+  navigate(id)
+ }
+
   return (
     
-    <Container style={{ width: "320px", display:"grid", alignItems:"center", backgroundColor:"white", justifyContent:"center", marginTop:"5%"}}>
+    <Container style={{ width: "320px", display:"grid", alignItems:"center", backgroundColor:"white", justifyContent:"center", marginTop:"5%"}} >
     {
         chunks(2).map(contx=>(
             <Row key={contx}>
            {contx.map(inst=>(
-             <Card key={inst} style={{ width: "130px", height:"150px", margin:"5px 5px 5px 5px", backgroundColor:"#f2f2f0" }}>
+            <Button key={inst} style={{ width: "150px",  backgroundColor:"white" }} variant="light"
+            onClick={() => viewItem(inst._id)}>
+             <Card >
              <Card.Img variant="top" src={inst.img} style={{ height: "100px", width:""}} />
              <Card.Body>
            </Card.Body>
-           <div style={{whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis", fontSize:"10px"}}>
+             <div style={{whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis", fontSize:"10px", height:"75px"}}>
              {inst.title}
              </div>
            </Card>
+           </Button>
            ))}
              
             </Row>

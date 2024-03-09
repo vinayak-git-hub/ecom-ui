@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Banner } from './Banner';
 import { QuickItems } from './QuickItems';
-import { InterSlider } from './InterSlider';
+import { InterSlider } from './InnerSlider';
 import { getProducts } from '../../api/Api';
 
  const Home = () => {
