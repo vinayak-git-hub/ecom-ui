@@ -6,11 +6,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Header = () => {
+const Header = (param) => {
   return (
-    <Navbar expand="lg" className="bg-light">
+    <Navbar expand="lg" style={{background:"linear-gradient(93deg, rgba(58,162,180,0.6797312675070029) 0%, rgba(253,29,227,0.38001137955182074) 48%, rgba(252,176,69,0.2399553571428571) 100%)"}}>
       <Container fluid>
-        <Navbar.Brand href="#">MI-CART</Navbar.Brand>
+        <Navbar.Brand href="/">MI-CART</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -18,7 +18,7 @@ const Header = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#action2">Link</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
@@ -30,11 +30,8 @@ const Header = () => {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
           </Nav>
-          <Form className="d-flex">
+          <Form className="d-flex" style={{margin:"0px 150px 0px 0px", width:"800px"}}>
             <Form.Control
               type="search"
               placeholder="Search"
@@ -43,6 +40,9 @@ const Header = () => {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
+          <Nav.Link href="/login" style={{position:"relative"}}>
+              {param.user.name?<>{param.user.name}</>:<>Login</>}
+            </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

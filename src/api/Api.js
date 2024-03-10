@@ -6,8 +6,14 @@ export const getProducts = async () =>{
 }
 
 export const getProduct = async (id) =>{
+
+    try{
     const response = await api.get('/products/'+id);
     return response.data
+    }catch{
+        return {error:true}
+    }
+
 }
 
 // export const getCartProducts = async () =>{

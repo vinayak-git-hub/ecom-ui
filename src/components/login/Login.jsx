@@ -26,7 +26,7 @@ export const Login = () => {
           className="container-fluid"
           style={{
             background:
-            "linear-gradient(90deg, rgb(87 58 58) 0%, rgb(0 0 0 / 25%) 50%, #ea86e8 100%)",
+            "linear-gradient(93deg, rgba(58,162,180,0.6797312675070029) 0%, rgba(253,29,227,0.38001137955182074) 48%, rgba(252,176,69,0.2399553571428571) 100%)",
             height: "100vh",
             width: "100vw",
             display:"flex",
@@ -34,9 +34,6 @@ export const Login = () => {
             alignItems:"center"
           }}
         >
-           <>  
-      <img className="img" src={img} alt="image"/>
-      </>
           <Form
             style={{
               backgroundColor: "white",
