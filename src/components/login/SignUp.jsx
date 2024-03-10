@@ -17,7 +17,7 @@ export const SignUp = () => {
   };
 
   const onClickHandler = () => {
-    console.log(user);
+    navigate("/not-found");
   };
 
   return (

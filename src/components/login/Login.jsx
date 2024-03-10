@@ -14,8 +14,8 @@ export const Login = () => {
     const navigate = useNavigate()
 
     const onClickHandler = () => {
-        console.log(user)
-     }
+      navigate("/not-found");
+    }
 
     const onClickNavigate = () => {
        navigate("/signup")
@@ -50,7 +50,7 @@ export const Login = () => {
               controlId="formHorizontalEmail"
             >
               <Col sm={10}>
-                <Form.Control type="user" placeholder="User Id" onChange={(e)=>setUser({...user, userName:e.target.value})} style={{marginLeft:"10%" , marginTop:"8%", textAlign:"center", opacity:"80%" }}/>
+                <Form.Control type="user" placeholder="User Id" onChange={(e)=>setUser({...user, userName:e.target.value})} style={{marginLeft:"10%" , marginTop:"8%", textAlign:"center", opacity:"80%" }} />
               </Col>
             </Form.Group>
             <Form.Group

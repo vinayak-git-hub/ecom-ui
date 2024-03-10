@@ -10,7 +10,7 @@ const Header = (param) => {
   return (
     <Navbar expand="lg" style={{background:"linear-gradient(93deg, rgba(58,162,180,0.6797312675070029) 0%, rgba(253,29,227,0.38001137955182074) 48%, rgba(252,176,69,0.2399553571428571) 100%)"}}>
       <Container fluid>
-        <Navbar.Brand href="/">MI-CART</Navbar.Brand>
+        <Navbar.Brand href="/" style={{marginLeft:"50px"}}>MI-CART</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -18,18 +18,6 @@ const Header = (param) => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
           </Nav>
           <Form className="d-flex" style={{margin:"0px 150px 0px 0px", width:"800px"}}>
             <Form.Control
@@ -37,8 +25,9 @@ const Header = (param) => {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              disabled
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success"  disabled>Search</Button>
           </Form>
           <Nav.Link href="/login" style={{position:"relative"}}>
               {param.user.name?<>{param.user.name}</>:<>Login</>}
