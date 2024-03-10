@@ -41,7 +41,7 @@ const About = () => {
   <>|</>
   <div  style={{margin:"10px 10px 10px 10px"}}>
   <img src={link} alt="" style={{height:"25px", marginRight:"5px"}}/>
-    <a href="linkedin.com/in/vinayak5">linkedin.com/in/vinayak5</a>
+    <a href="https://linkedin.com/in/vinayak5">linkedin.com/in/vinayak5</a>
   </div>
     </div>
     
