@@ -1,5 +1,10 @@
 import api from './config'
 
+export const test = async () =>{
+    const response = await api.get('/');
+    return response.data
+}
+
 export const getProducts = async () =>{
     const response = await api.get('/products');
     return response.data
