@@ -1,0 +1,12 @@
+.nf{
+    height: 200px;;
+    width: 200px;;
+    margin:0px 0px 0px 200px;
+}
+
+
+.ot{
+    display:grid; justify-content:center; align-items:center;
+}
+
+/* style={{height:"200px", width:"200px", margin:"0px 0px 0px 200px"}} */
