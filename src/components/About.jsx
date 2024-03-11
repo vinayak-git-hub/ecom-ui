@@ -30,7 +30,7 @@ const About = () => {
     
     <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
   <div style={{margin:"10px 10px 10px 10px"}}>
-  <img src={email} alt="" style={{height:"25px"}}/>
+  <img src={email} alt="" style={{height:"25px", marginRight:"5px"}}/>
     <a href="mailto:vinayak.m.honnatti@gmail.com">vinayak.m.honnatti@gmail.com</a>
   </div>
   <>|</>

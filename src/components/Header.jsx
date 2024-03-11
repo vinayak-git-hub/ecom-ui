@@ -4,13 +4,14 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from '../assets/logo.png' 
 
 const Header = (param) => {
   return (
     <Navbar expand="lg" style={{background:"linear-gradient(93deg, rgba(58,162,180,0.6797312675070029) 0%, rgba(253,29,227,0.38001137955182074) 48%, rgba(252,176,69,0.2399553571428571) 100%)"}}>
       <Container fluid>
-        <Navbar.Brand href="/" style={{marginLeft:"50px"}}>MI-CART</Navbar.Brand>
+        <img src={logo} alt="" style={{height:"50px", marginLeft:"20px"}}/>
+        <Navbar.Brand href="/" style={{marginLeft:"10px", fontFamily:"Lucida Handwriting"}}>CART</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

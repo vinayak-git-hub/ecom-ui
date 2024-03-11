@@ -4,7 +4,6 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { useNavigate  } from 'react-router-dom';
-import img from '../../public/supermaket.png'
 import './auth.css'
 
 export const Login = () => {
